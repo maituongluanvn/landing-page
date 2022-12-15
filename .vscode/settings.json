@@ -1,0 +1,10 @@
+{
+    "eslint.validate": ["typescript", "typescriptreact"],
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "jest.pathToJest": "npm run test:unit --",
+    "cSpell.words": ["ubibot"]
+}

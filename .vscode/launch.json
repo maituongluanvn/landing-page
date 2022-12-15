@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "name": "vscode-jest-tests e2e",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+            "args": ["--runInBand", "--config", "jest.e2e.config.js"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "protocol": "inspector",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true
+        },
+        {
+            "type": "node",
+            "name": "vscode-jest-tests unit",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+            "args": ["--runInBand", "--config", "jest.unit.config.js"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "protocol": "inspector",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true
+        }
+    ]
+}
