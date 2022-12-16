@@ -12,7 +12,7 @@ import styles from '@styles/jss/nextjs-material-kit/components/cardHeaderStyle';
 const useStyles = makeStyles(styles);
 
 export default function CardHeader(props: CardHeaderProps) {
-  const classes = useStyles();
+  const classes: any = useStyles();
   const { className, children, color, plain, ...rest } = props;
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,

@@ -16,7 +16,7 @@ export default function CardFooter(props: CardFooterProps) {
   const { className, children, ...rest } = props;
   const cardFooterClasses = classNames({
     [classes.cardFooter]: true,
-    [className]: className !== undefined,
+    [`${className}`]: className !== undefined,
   });
   return (
     <div className={cardFooterClasses} {...rest}>

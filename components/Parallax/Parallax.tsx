@@ -39,7 +39,7 @@ export default function Parallax(props: any) {
     [classes.filter]: filter,
     [classes.small]: small,
     [classes.parallaxResponsive]: responsive,
-    [className]: className !== undefined,
+    [`${className}`]: className !== undefined,
   });
   return (
     <div

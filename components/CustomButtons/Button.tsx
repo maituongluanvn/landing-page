@@ -19,7 +19,7 @@ const RegularButton = React.forwardRef((props: any, ref: any) => {
   const { color, round, children, fullWidth, disabled, simple, size, block, link, justIcon, className, ...rest } =
     props;
 
-  const classes = makeComponentStyles();
+  const classes: any = makeComponentStyles();
 
   const btnClasses = classNames({
     [classes.button]: true,
