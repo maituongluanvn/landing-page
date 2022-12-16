@@ -10,16 +10,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Grid
-        item
-        xs={12}
-        md={8}
-        sx={{
-          '& .markdown': {
-            py: 3,
-          },
-        }}
-      >
+      <Grid item xs={12} md={8}>
         <Typography variant="h6" gutterBottom>
           This is title
         </Typography>

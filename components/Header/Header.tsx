@@ -28,15 +28,4 @@ export default function Header(props: HeaderProps) {
   );
 }
 
-export interface HeaderProps {
-  color?: 'primary' | 'info' | 'success' | 'warning' | 'danger' | 'transparent' | 'white' | 'rose' | 'dark';
-  rightLinks?: ReactElement;
-  leftLinks?: ReactElement;
-  brand: string;
-  fixed?: boolean;
-  absolute?: boolean;
-  changeColorOnScroll?: {
-    height: number;
-    color: 'primary' | 'info' | 'success' | 'warning' | 'danger' | 'transparent' | 'white' | 'rose' | 'dark';
-  };
-}
+export interface HeaderProps {}
