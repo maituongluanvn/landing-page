@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { List, ListItem } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-import styles from '../../styles/jss/nextjs-material-kit/components/footerStyle';
+import styles from '@styles/jss/nextjs-material-kit/components/footerStyle';
 
 const useStyles = makeStyles(styles as any);
 
@@ -28,26 +28,22 @@ export default function Footer(props: FooterProps) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="https://www.creative-tim.com/?AFFILIATE=128200" className={classes.block} target="_blank">
-                Creative Tim
+              <a href="https://www.linkedin.com/in/mai-luan-40523a16b/" className={classes.block} target="_blank">
+                Linkedin
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation?AFFILIATE=128200"
-                className={classes.block}
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/mai-luan-40523a16b/" className={classes.block} target="_blank">
                 About us
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="http://blog.creative-tim.com/?AFFILIATE=128200" className={classes.block} target="_blank">
+              <a href="https://www.linkedin.com/in/mai-luan-40523a16b/" className={classes.block} target="_blank">
                 Blog
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="https://www.creative-tim.com/license?AFFILIATE=128200" className={classes.block} target="_blank">
+              <a href="https://www.linkedin.com/in/mai-luan-40523a16b/" className={classes.block} target="_blank">
                 Licenses
               </a>
             </ListItem>
@@ -55,8 +51,8 @@ export default function Footer(props: FooterProps) {
         </div>
         <div className={classes.right}>
           {/* &copy; {1900 + new Date().getYear()} , made with <Favorite className={classes.icon} /> by{' '} */}
-          <a href="https://www.creative-tim.com?AFFILIATE=128200" className={aClasses} target="_blank">
-            Creative Tim
+          <a href="https://www.linkedin.com/in/mai-luan-40523a16b/" className={aClasses} target="_blank">
+            Mai Luan
           </a>{' '}
           for a better web.
         </div>
