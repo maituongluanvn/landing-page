@@ -9,7 +9,7 @@ import { makeStyles } from '@mui/styles';
 // core components
 import styles from '@styles/jss/nextjs-material-kit/components/cardBodyStyle';
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles as any);
 
 export default function CardBody(props: CardBodyProps) {
   const classes = useStyles();

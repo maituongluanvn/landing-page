@@ -12,7 +12,7 @@ import Button from '@components/CustomButtons/Button';
 
 import styles from '@styles/jss/nextjs-material-kit/pages/landingPageSections/workStyle';
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles as any);
 
 export default function WorkSection() {
   const classes = useStyles();

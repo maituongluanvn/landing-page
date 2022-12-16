@@ -5,7 +5,7 @@ import {
 } from "../../../nextjs-material-kit";
 import headerLinksStyle from "../../components/headerLinksStyle";
 
-const navbarsStyle = (theme) => ({
+const navbarsStyle = (theme: any) => ({
   section: {
     padding: "70px 0",
     paddingTop: "0"

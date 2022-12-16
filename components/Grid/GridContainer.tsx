@@ -18,9 +18,9 @@ export interface GridContainerProps {
   className?: string;
 }
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles as any);
 
-export default function GridContainer(props: GridContainerProps) {
+export default function GridContainer(props: any) {
   const classes = useStyles();
   const { children, className, ...rest } = props;
   return (

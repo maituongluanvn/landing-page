@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import Header from '@components/Header/Header';
+// import Head from 'next/head';
+// import Image from 'next/image';
+// import Grid from '@mui/material/Grid';
+// import Typography from '@mui/material/Typography';
+// import Divider from '@mui/material/Divider';
+// import Header from '@components/Header/Header';
 // import styles from '../styles/Home.module.css'
 
 export default function Home() {

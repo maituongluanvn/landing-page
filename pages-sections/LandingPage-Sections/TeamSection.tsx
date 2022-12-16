@@ -16,7 +16,7 @@ import CardFooter from '@components/Card/CardFooter';
 
 import styles from '@styles/jss/nextjs-material-kit/pages/landingPageSections/teamStyle';
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles as any);
 
 export default function TeamSection() {
   const classes = useStyles();
