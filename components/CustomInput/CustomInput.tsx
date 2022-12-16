@@ -26,7 +26,7 @@ export default function CustomInput(props: CustomInputProps) {
     [classes.whiteUnderline]: white,
   });
   const marginTop = classNames({
-    [inputRootCustomClasses]: inputRootCustomClasses !== undefined,
+    [`${inputRootCustomClasses}`]: inputRootCustomClasses !== undefined,
   });
   const inputClasses = classNames({
     [classes.input]: true,

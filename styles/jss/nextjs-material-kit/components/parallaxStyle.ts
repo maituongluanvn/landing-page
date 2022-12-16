@@ -1,4 +1,4 @@
-const parallaxStyle = (theme: any) => ({
+const parallaxStyle = (_theme: any) => ({
   parallax: {
     height: "90vh",
     maxHeight: "1000px",

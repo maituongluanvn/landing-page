@@ -20,7 +20,7 @@
 
 const hexColorToRGB = function (hexColor: string) {
   let detectShorthand = /^#?([a-f\d])([a-f\d])([a-f\d])$/i; // #000 vs #000000
-  hexColor = hexColor.replace(detectShorthand, function (m, r, g, b) {
+  hexColor = hexColor.replace(detectShorthand, function (_m, r, g, b) {
     return r + r + g + g + b + b;
   });
 
@@ -34,7 +34,7 @@ const hexColorToRGB = function (hexColor: string) {
     : undefined;
 };
 
-const hexToRGBAlpha = function (hexColor, alpha) {
+const hexToRGBAlpha = function (hexColor: any, alpha: any) {
   let rgb = hexColorToRGB(hexColor);
   return rgb ? `rgba(${rgb.r},${rgb.g},${rgb.b},${alpha})` : undefined;
 };

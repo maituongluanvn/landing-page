@@ -3,7 +3,7 @@ import { defaultFont
 
 import tooltip from "../../nextjs-material-kit/tooltipsStyle";
 
-const headerLinksStyle = (theme) => ({
+const headerLinksStyle = (theme: any) => ({
   list: {
     ...defaultFont,
     fontSize: "14px",

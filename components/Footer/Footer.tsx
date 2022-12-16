@@ -7,9 +7,6 @@ import classNames from 'classnames';
 import { List, ListItem } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
-// @material-ui/icons
-import Favorite from '@mui/icons-material';
-
 import styles from '../../styles/jss/nextjs-material-kit/components/footerStyle';
 
 const useStyles = makeStyles(styles as any);

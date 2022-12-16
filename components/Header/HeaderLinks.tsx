@@ -19,7 +19,7 @@ import styles from '@styles/jss/nextjs-material-kit/components/headerLinksStyle'
 
 const useStyles = makeStyles(styles as any);
 
-export default function HeaderLinks(props: any) {
+export default function HeaderLinks() {
   const classes = useStyles();
   return (
     <List className={classes.list}>
@@ -27,7 +27,7 @@ export default function HeaderLinks(props: any) {
         <CustomDropdown
           noLiPadding
           navDropdown
-          buttonText="Components"
+          buttonText="About us"
           buttonProps={{
             className: classes.navLink,
             color: 'transparent',
@@ -50,7 +50,7 @@ export default function HeaderLinks(props: any) {
       <ListItem className={classes.listItem}>
         <Button href="blog" color="transparent" className={classes.navLink}>
           <i className={classes.socialIcons + ' fa fa-rss'} />
-          Blog
+          Projects
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -64,11 +64,11 @@ export default function HeaderLinks(props: any) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
+        {/* <Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />
           </IconButton>
-        </Tooltip>*/}
+        </Tooltip> */}
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"

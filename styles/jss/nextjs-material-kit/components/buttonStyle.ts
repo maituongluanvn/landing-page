@@ -9,7 +9,7 @@ import {
   dangerColor
 } from "../../nextjs-material-kit";
 
-const buttonStyle = {
+const buttonStyle: any = {
   button: {
     minHeight: "auto",
     minWidth: "auto",
