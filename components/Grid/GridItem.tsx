@@ -21,7 +21,7 @@ export interface GridItemProps {
   children: JSX.Element | JSX.Element[];
   className?: string;
 }
-export default function GridItem(props: any) {
+export default function GridItem(props: GridItemProps) {
   const classes = useStyles();
   const { children, className, ...rest } = props;
   return (

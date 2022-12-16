@@ -34,7 +34,7 @@ export default function HeaderLinks() {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link href="/components">
+            <Link href="/about-us">
               <a className={classes.dropdownLink}>All components</a>
             </Link>,
             <a
@@ -48,14 +48,14 @@ export default function HeaderLinks() {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="blog" color="transparent" className={classes.navLink}>
+        <Button href="/projects" color="transparent" className={classes.navLink}>
           <i className={classes.socialIcons + ' fa fa-rss'} />
           Projects
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://github.com/app-generator/nextjs-material-kit"
+          href="https://www.linkedin.com/in/mai-luan-40523a16b/"
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -76,7 +76,7 @@ export default function HeaderLinks() {
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
+            href="https://www.linkedin.com/in/mai-luan-40523a16b/"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -94,7 +94,7 @@ export default function HeaderLinks() {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
+            href="https://www.linkedin.com/in/mai-luan-40523a16b/"
             target="_blank"
             className={classes.navLink}
           >
@@ -111,7 +111,7 @@ export default function HeaderLinks() {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+            href="https://www.linkedin.com/in/mai-luan-40523a16b/"
             target="_blank"
             className={classes.navLink}
           >
