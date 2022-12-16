@@ -9,14 +9,14 @@ import Header from '@components/Header/Header';
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Grid item xs={12} md={8}>
         <Typography variant="h6" gutterBottom>
           This is title
         </Typography>
         <Divider />
         content
-      </Grid>
+      </Grid> */}
     </>
   );
 }

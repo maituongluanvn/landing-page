@@ -19,7 +19,7 @@ const customDropdownStyle = (theme) => ({
     pointerEvents: "none"
   },
   pooperNav: {
-    [theme.breakpoints.down("sm")]: {
+    [theme?.breakpoints?.down("sm")]: {
       position: "static !important",
       left: "unset !important",
       top: "unset !important",
@@ -57,7 +57,7 @@ const customDropdownStyle = (theme) => ({
   popperResponsive: {
     zIndex: "1200",
     position: "absolute !important",
-    [theme.breakpoints.down("sm")]: {
+    [theme?.breakpoints?.down("sm")]: {
       zIndex: "1640",
       position: "static !important",
       float: "none",

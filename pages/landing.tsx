@@ -53,13 +53,7 @@ export default function LandingPage(props: any) {
                 here. Add here all the information that can make you or your product create the first impression.
               </h4>
               <br />
-              <Button
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Button color="danger" size="lg" target="_blank" rel="noopener noreferrer">
                 <i className="fas fa-play" />
                 Watch video
               </Button>

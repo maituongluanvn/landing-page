@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 // react components for routing our app without refresh
-import Link from "next/link";
+import Link from 'next/link';
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@mui/styles';
 // @material-ui/icons
 
 // core components
-import GridContainer from "../../components/Grid/GridContainer";
-import GridItem from "../../components/Grid/GridItem";
-import Button from "../../components/CustomButtons/Button";
+import GridContainer from '../../components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem';
+import Button from '../../components/CustomButtons/Button';
 
-import styles from "../../styles/jss/nextjs-material-kit/pages/componentsSections/exampleStyle";
+import styles from '../../styles/jss/nextjs-material-kit/pages/componentsSections/exampleStyle';
 
 const useStyles = makeStyles(styles);
 
@@ -26,13 +26,7 @@ export default function SectionExamples() {
                 <img
                   src="/img/landing.jpg"
                   alt="..."
-                  className={
-                    classes.imgRaised +
-                    " " +
-                    classes.imgRounded +
-                    " " +
-                    classes.imgFluid
-                  }
+                  className={classes.imgRaised + ' ' + classes.imgRounded + ' ' + classes.imgFluid}
                 />
                 <Button color="primary" size="lg" simple>
                   View landing page
@@ -46,13 +40,7 @@ export default function SectionExamples() {
                 <img
                   src="/img/profile.jpg"
                   alt="..."
-                  className={
-                    classes.imgRaised +
-                    " " +
-                    classes.imgRounded +
-                    " " +
-                    classes.imgFluid
-                  }
+                  className={classes.imgRaised + ' ' + classes.imgRounded + ' ' + classes.imgFluid}
                 />
                 <Button color="primary" size="lg" simple>
                   View profile page

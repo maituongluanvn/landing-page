@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@mui/styles';
 
 // @material-ui/icons
 
 // core components
-import GridContainer from "../../components/Grid/GridContainer";
-import GridItem from "../../components/Grid/GridItem";
-import CustomInput from "../../components/CustomInput/CustomInput";
-import Button from "../../components/CustomButtons/Button";
+import GridContainer from '@components/Grid/GridContainer';
+import GridItem from '@components/Grid/GridItem';
+import CustomInput from '@components/CustomInput/CustomInput';
+import Button from '@components/CustomButtons/Button';
 
-import styles from "../../styles/jss/nextjs-material-kit/pages/landingPageSections/workStyle";
+import styles from '@styles/jss/nextjs-material-kit/pages/landingPageSections/workStyle';
 
 const useStyles = makeStyles(styles);
 
@@ -22,10 +22,8 @@ export default function WorkSection() {
         <GridItem cs={12} sm={12} md={8}>
           <h2 className={classes.title}>Work with us</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
+            Divide details about your product or agency work into parts. Write a few lines about each one and contact us
+            about any further collaboration. We will responde get back to you in a couple of hours.
           </h4>
           <form>
             <GridContainer>
@@ -34,7 +32,7 @@ export default function WorkSection() {
                   labelText="Your Name"
                   id="name"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -43,7 +41,7 @@ export default function WorkSection() {
                   labelText="Your Email"
                   id="email"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -52,11 +50,11 @@ export default function WorkSection() {
                 id="message"
                 formControlProps={{
                   fullWidth: true,
-                  className: classes.textArea
+                  className: classes.textArea,
                 }}
                 inputProps={{
                   multiline: true,
-                  rows: 5
+                  rows: 5,
                 }}
               />
               <GridItem xs={12} sm={12} md={4} className={classes.textCenter}>

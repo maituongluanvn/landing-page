@@ -22,7 +22,7 @@ const headerLinksStyle = (theme) => ({
     width: "auto",
     margin: "0",
     padding: "0",
-    [theme.breakpoints.down("sm")]: {
+    [theme?.breakpoints?.down("sm")]: {
       width: "100%",
       "&:after": {
         width: "calc(100% - 30px)",
@@ -53,7 +53,7 @@ const headerLinksStyle = (theme) => ({
       color: "inherit",
       background: "rgba(200, 200, 200, 0.2)"
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme?.breakpoints?.down("sm")]: {
       width: "calc(100% - 30px)",
       marginLeft: "15px",
       marginBottom: "8px",
@@ -65,7 +65,7 @@ const headerLinksStyle = (theme) => ({
     }
   },
   notificationNavLink: {
-    [theme.breakpoints.down("md")]: {
+    [theme?.breakpoints?.down("md")]: {
       top: "0",
       margin: "5px 15px"
     },
@@ -81,7 +81,7 @@ const headerLinksStyle = (theme) => ({
     top: "4px"
   },
   registerNavLink: {
-    [theme.breakpoints.down("md")]: {
+    [theme?.breakpoints?.down("md")]: {
       top: "0",
       margin: "5px 15px"
     },

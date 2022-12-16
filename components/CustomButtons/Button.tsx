@@ -1,35 +1,23 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 // nodejs library to set properties for components
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 
 // @material-ui/core components
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import Button, { ButtonTypeMap } from "@material-ui/core/Button";
+import makeStyles from '@mui/styles/makeStyles';
+import { Button } from '@mui/material';
 
 // core components
 
-import buttonStyle from "../../styles/jss/nextjs-material-kit/components/buttonStyle";
+import buttonStyle from '@styles/jss/nextjs-material-kit/components/buttonStyle';
 
 const makeComponentStyles = makeStyles(() => ({
   ...buttonStyle,
 }));
 
-const RegularButton = React.forwardRef((props: RegularButtonProp, ref: any) => {
-  const {
-    color,
-    round,
-    children,
-    fullWidth,
-    disabled,
-    simple,
-    size,
-    block,
-    link,
-    justIcon,
-    className,
-    ...rest
-  } = props;
+const RegularButton = React.forwardRef((props: any, ref: any) => {
+  const { color, round, children, fullWidth, disabled, simple, size, block, link, justIcon, className, ...rest } =
+    props;
 
   const classes = makeComponentStyles();
 
@@ -55,19 +43,19 @@ const RegularButton = React.forwardRef((props: RegularButtonProp, ref: any) => {
 
 export interface RegularButtonProp {
   color:
-    | "primary"
-    | "info"
-    | "success"
-    | "warning"
-    | "danger"
-    | "rose"
-    | "white"
-    | "facebook"
-    | "twitter"
-    | "google"
-    | "github"
-    | "transparent";
-  size?: "sm" | "lg";
+    | 'primary'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'rose'
+    | 'white'
+    | 'facebook'
+    | 'twitter'
+    | 'google'
+    | 'github'
+    | 'transparent';
+  size?: 'sm' | 'lg';
   simple?: boolean;
   round?: boolean;
   fullWidth?: boolean;

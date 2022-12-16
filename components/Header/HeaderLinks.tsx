@@ -1,28 +1,25 @@
 /*eslint-disable*/
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
-import Icon from "@material-ui/core/Icon";
+import { makeStyles } from '@mui/styles';
+import { List, Tooltip, ListItem } from '@mui/material';
 
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
+import { Apps, CloudDownload } from '@mui/icons-material';
+// import DeleteIcon from '@material-ui/icons/Delete';
+// import IconButton from '@material-ui/core/IconButton';
 
 // core components
-import CustomDropdown from "../CustomDropdown/CustomDropdown";
-import Button from "../CustomButtons/Button";
+import CustomDropdown from '../CustomDropdown/CustomDropdown';
+import Button from '../CustomButtons/Button';
 
-import styles from "../../styles/jss/nextjs-material-kit/components/headerLinksStyle";
+import styles from '@styles/jss/nextjs-material-kit/components/headerLinksStyle';
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles(styles as any);
 
-export default function HeaderLinks(props) {
+export default function HeaderLinks(props: any) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
@@ -33,7 +30,7 @@ export default function HeaderLinks(props) {
           buttonText="Components"
           buttonProps={{
             className: classes.navLink,
-            color: "transparent"
+            color: 'transparent',
           }}
           buttonIcon={Apps}
           dropdownList={[
@@ -46,17 +43,14 @@ export default function HeaderLinks(props) {
               className={classes.dropdownLink}
             >
               Documentation
-            </a>
+            </a>,
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="blog"
-          color="transparent"
-          className={classes.navLink}
-        >
-          <i className={classes.socialIcons + " fa fa-rss"} />Blog
+        <Button href="blog" color="transparent" className={classes.navLink}>
+          <i className={classes.socialIcons + ' fa fa-rss'} />
+          Blog
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -78,7 +72,7 @@ export default function HeaderLinks(props) {
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"
-          placement={"top"}
+          placement={'top'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
@@ -87,7 +81,7 @@ export default function HeaderLinks(props) {
             color="transparent"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
+            <i className={classes.socialIcons + ' fab fa-twitter'} />
           </Button>
         </Tooltip>
       </ListItem>
@@ -95,7 +89,7 @@ export default function HeaderLinks(props) {
         <Tooltip
           id="instagram-facebook"
           title="Follow us on facebook"
-          placement={"top"}
+          placement={'top'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
@@ -104,7 +98,7 @@ export default function HeaderLinks(props) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
+            <i className={classes.socialIcons + ' fab fa-facebook'} />
           </Button>
         </Tooltip>
       </ListItem>
@@ -112,7 +106,7 @@ export default function HeaderLinks(props) {
         <Tooltip
           id="instagram-tooltip"
           title="Follow us on instagram"
-          placement={"top"}
+          placement={'top'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button
@@ -121,7 +115,7 @@ export default function HeaderLinks(props) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
+            <i className={classes.socialIcons + ' fab fa-instagram'} />
           </Button>
         </Tooltip>
       </ListItem>
