@@ -1,4 +1,4 @@
-const parallaxStyle = (_theme: any) => ({
+const parallaxStyle = (theme: any) => ({
   parallax: {
     height: "90vh",
     maxHeight: "1000px",
@@ -31,9 +31,9 @@ const parallaxStyle = (_theme: any) => ({
     height: "380px",
   },
   parallaxResponsive: {
-    // [theme?.breakpoints?.down("md")]: {
+    [theme?.breakpoints?.down("md")]: {
       minHeight: "660px",
-    // },
+    },
   },
 });
 
