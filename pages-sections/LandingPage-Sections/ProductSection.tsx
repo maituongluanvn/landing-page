@@ -3,9 +3,7 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 
 // @material-ui/icons
-import Chat from '@mui/icons-material';
-import VerifiedUser from '@mui/icons-material/VerifiedUser';
-import Fingerprint from '@mui/icons-material/Fingerprint';
+import { Chat, VerifiedUser, Fingerprint } from '@mui/icons-material';
 // core components
 import GridContainer from '@components/Grid/GridContainer';
 import GridItem from '@components/Grid/GridItem';

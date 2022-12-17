@@ -7,12 +7,10 @@ import { makeStyles } from '@mui/styles';
 import { List, Tooltip, ListItem } from '@mui/material';
 
 // @material-ui/icons
-import { Apps, CloudDownload } from '@mui/icons-material';
-// import DeleteIcon from '@material-ui/icons/Delete';
-// import IconButton from '@material-ui/core/IconButton';
-
+// import { CloudDownload } from '@mui/icons-material';
+// import AutoAwesomeMotionTwoToneIcon from '@mui/icons-material/AutoAwesomeMotionTwoTone';
 // core components
-import CustomDropdown from '../CustomDropdown/CustomDropdown';
+// import CustomDropdown from '../CustomDropdown/CustomDropdown';
 import Button from '../CustomButtons/Button';
 
 import styles from '@styles/jss/nextjs-material-kit/components/headerLinksStyle';
@@ -24,7 +22,7 @@ export default function HeaderLinks() {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
+        {/* <CustomDropdown
           noLiPadding
           navDropdown
           buttonText="About us"
@@ -45,11 +43,11 @@ export default function HeaderLinks() {
               Documentation
             </a>,
           ]}
-        />
+        /> */}
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button href="/projects" color="transparent" className={classes.navLink}>
-          <i className={classes.socialIcons + ' fa fa-rss'} />
+          {/* <AutoAwesomeMotionTwoToneIcon className={classes.icons} /> */}
           Projects
         </Button>
       </ListItem>
@@ -60,7 +58,7 @@ export default function HeaderLinks() {
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          About us
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

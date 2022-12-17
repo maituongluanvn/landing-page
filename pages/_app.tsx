@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <React.Fragment>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>NextJS Material Kit by Creative Tim</title>
+        <title>By Luan Mai</title>
       </Head>
       <Component {...pageProps} />
     </React.Fragment>
