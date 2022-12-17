@@ -43,7 +43,11 @@ export default function LandingPage(props: any) {
         }}
         {...rest}
       />
-      <Parallax filter responsive image="/img/landing-bg.jpg">
+      <Parallax
+        filter
+        responsive
+        image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80"
+      >
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
