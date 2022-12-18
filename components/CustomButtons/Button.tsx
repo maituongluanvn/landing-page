@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React, { ReactNode } from 'react';
 // nodejs library to set properties for components
 // nodejs library that concatenates classes
@@ -11,10 +12,12 @@ import { Button } from '@mui/material';
 
 import buttonStyle from '@styles/jss/nextjs-material-kit/components/buttonStyle';
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 const makeComponentStyles = makeStyles(() => ({
   ...buttonStyle,
 }));
 
+// eslint-disable-next-line react/display-name
 const RegularButton = React.forwardRef((props: any, ref: any) => {
   const { color, round, children, fullWidth, disabled, simple, size, block, link, justIcon, className, ...rest } =
     props;

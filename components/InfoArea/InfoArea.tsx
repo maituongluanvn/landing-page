@@ -9,6 +9,14 @@ import styles from '@styles/jss/nextjs-material-kit/components/infoStyle';
 
 const useStyles = makeStyles(styles as any);
 
+export interface InfoAreaProps {
+  icon: any;
+  title: any;
+  description: string;
+  iconColor?: 'primary' | 'warning' | 'danger' | 'success' | 'info' | 'rose' | 'gray';
+  vertical: boolean;
+}
+
 export default function InfoArea(props: InfoAreaProps) {
   const classes = useStyles();
   const { title, description, iconColor, vertical } = props;
@@ -32,12 +40,4 @@ export default function InfoArea(props: InfoAreaProps) {
       </div>
     </div>
   );
-}
-
-export interface InfoAreaProps {
-  icon: any;
-  title: any;
-  description: string;
-  iconColor?: 'primary' | 'warning' | 'danger' | 'success' | 'info' | 'rose' | 'gray';
-  vertical: boolean;
 }

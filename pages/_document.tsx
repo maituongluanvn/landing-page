@@ -20,7 +20,7 @@ class MyDocument extends Document {
           <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet" />
         </Head>
         <body>
-          <div id="page-transition"></div>
+          {/* <div id="page-transition"></div> */}
           <Main />
           <NextScript />
         </body>

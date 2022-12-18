@@ -16,8 +16,8 @@ export default function CustomInput(props: CustomInputProps) {
     props;
 
   const labelClasses = classNames({
-    [' ' + classes.labelRootError]: error,
-    [' ' + classes.labelRootSuccess]: success && !error,
+    [` ${classes.labelRootError}`]: error,
+    [` ${classes.labelRootSuccess}`]: success && !error,
   });
   const underlineClasses = classNames({
     [classes.underlineError]: error,
@@ -32,8 +32,9 @@ export default function CustomInput(props: CustomInputProps) {
     [classes.input]: true,
     [classes.whiteInput]: white,
   });
-  var formControlClasses;
+  let formControlClasses;
   if (formControlProps !== undefined) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     formControlClasses = classNames(formControlProps.className, classes.formControl);
   } else {
     formControlClasses = classes.formControl;
@@ -41,7 +42,7 @@ export default function CustomInput(props: CustomInputProps) {
   return (
     <FormControl {...formControlProps} className={formControlClasses}>
       {labelText !== undefined ? (
-        <InputLabel className={classes.labelRoot + ' ' + labelClasses} htmlFor={id} {...labelProps}>
+        <InputLabel className={`${classes.labelRoot} ${labelClasses}`} htmlFor={id} {...labelProps}>
           {labelText}
         </InputLabel>
       ) : null}

@@ -18,6 +18,12 @@ export default function Parallax(props: any) {
   //   windowScrollTop = 0;
   // }
   const [transform, setTransform] = React.useState('translate3d(0,0px,0)');
+
+  const resetTransform = () => {
+    const windowScrollTop = window.pageYOffset / 3;
+    setTransform(`translate3d(0,${windowScrollTop}px,0)`);
+  };
+
   React.useEffect(() => {
     if (window.innerWidth >= 768) {
       window.addEventListener('scroll', resetTransform);
@@ -28,10 +34,7 @@ export default function Parallax(props: any) {
       }
     };
   });
-  const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3;
-    setTransform('translate3d(0,' + windowScrollTop + 'px,0)');
-  };
+
   const { filter, className, children, style, image, small, responsive } = props;
   const classes = useStyles();
   const parallaxClasses = classNames({
@@ -46,7 +49,7 @@ export default function Parallax(props: any) {
       className={parallaxClasses}
       style={{
         ...style,
-        backgroundImage: 'url(' + image + ')',
+        backgroundImage: `url(${image})`,
         transform: transform,
       }}
     >

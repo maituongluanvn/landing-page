@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
@@ -8,19 +9,18 @@ import { makeStyles } from '@mui/styles';
 import { MenuItem, Popper, MenuList, ClickAwayListener, Paper, Grow, Divider, Icon } from '@mui/material';
 
 // core components
+import styles from '@styles/jss/nextjs-material-kit/components/customDropdownStyle';
 import Button from '../CustomButtons/Button';
-
-import styles from '../../styles/jss/nextjs-material-kit/components/customDropdownStyle';
 
 const useStyles = makeStyles(styles as any);
 
 export default function CustomDropdown(props: CustomDropdownProps) {
   const [anchorEl, setAnchorEl] = React.useState<any>(null);
   const handleClick = (event: any) => {
-    if (anchorEl && anchorEl.contains(event.target)) {
+    if (anchorEl && anchorEl?.contains(event?.target)) {
       setAnchorEl(null);
     } else {
-      setAnchorEl(event.currentTarget);
+      setAnchorEl(event?.currentTarget);
     }
   };
   const handleClose = (param: any) => {
@@ -57,7 +57,7 @@ export default function CustomDropdown(props: CustomDropdownProps) {
   });
   const dropdownItem = classNames({
     [classes.dropdownItem]: true,
-    [classes[(hoverColor || 'primary') + 'Hover']]: true,
+    [classes[`${hoverColor || 'primary'}Hover`]]: true,
     [classes.noLiPadding]: noLiPadding,
     [classes.dropdownItemRTL]: rtlActive,
   });
@@ -89,6 +89,7 @@ export default function CustomDropdown(props: CustomDropdownProps) {
         anchorEl={anchorEl}
         transition
         disablePortal
+        // eslint-disable-next-line no-nested-ternary
         placement={dropup ? (left ? 'top-start' : 'top') : left ? 'bottom-start' : 'bottom'}
         className={classNames({
           [classes.popperClose]: !anchorEl,
@@ -114,6 +115,7 @@ export default function CustomDropdown(props: CustomDropdownProps) {
                     if (prop.divider) {
                       return (
                         <Divider
+                          // eslint-disable-next-line react/no-array-index-key
                           key={key}
                           onClick={() => handleClose('divider')}
                           className={classes.dropdownDividerItem}
@@ -121,6 +123,7 @@ export default function CustomDropdown(props: CustomDropdownProps) {
                       );
                     }
                     return (
+                      // eslint-disable-next-line react/no-array-index-key
                       <MenuItem key={key} onClick={() => handleClose(prop)} className={dropdownItem}>
                         {prop}
                       </MenuItem>
@@ -150,5 +153,6 @@ export interface CustomDropdownProps {
   noLiPadding?: boolean;
   navDropdown?: boolean;
   // function that retuns the selected item
+  // eslint-disable-next-line @typescript-eslint/ban-types
   onClick?: Function;
 }
