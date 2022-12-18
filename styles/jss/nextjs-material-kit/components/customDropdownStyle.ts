@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import {
   defaultFont,
   primaryColor,
@@ -19,6 +20,7 @@ const customDropdownStyle = (theme: any) => ({
     pointerEvents: "none"
   },
   pooperNav: {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     [theme?.breakpoints?.down("sm")]: {
       position: "static !important",
       left: "unset !important",
@@ -57,6 +59,7 @@ const customDropdownStyle = (theme: any) => ({
   popperResponsive: {
     zIndex: "1200",
     position: "absolute !important",
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     [theme?.breakpoints?.down("sm")]: {
       zIndex: "1640",
       position: "static !important",

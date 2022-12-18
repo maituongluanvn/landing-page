@@ -4,7 +4,6 @@ import classNames from 'classnames';
 // @material-ui/core components
 import { makeStyles } from '@mui/styles';
 // @material-ui/icons
-import { Camera, Palette, Favorite } from '@mui/icons-material';
 // core components
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
@@ -12,7 +11,6 @@ import Button from '@components/CustomButtons/Button';
 import GridContainer from '@components/Grid/GridContainer';
 import GridItem from '@components/Grid/GridItem';
 import HeaderLinks from '@components/Header/HeaderLinks';
-import NavPills from '@components/NavPills/NavPills';
 import Parallax from '@components/Parallax/Parallax';
 
 import styles from '@styles/jss/nextjs-material-kit/pages/profilePage';
@@ -28,7 +26,7 @@ export default function ProfilePage(props: any) {
     <div>
       <Header
         color="transparent"
-        brand="NextJS Material Kit"
+        brand="Your logo here"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{

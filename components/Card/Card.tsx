@@ -20,7 +20,7 @@ export default function Card(props: CardProps) {
     [classes.cardCarousel]: carousel,
   });
   if (className !== undefined) {
-    cardClasses.concat(' ' + className);
+    cardClasses.concat(` ${className}`);
   }
   return (
     <div className={cardClasses} {...rest}>

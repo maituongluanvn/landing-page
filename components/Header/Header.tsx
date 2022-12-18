@@ -16,19 +16,7 @@ const useStyles = makeStyles(styles as any);
 export default function Header(props: HeaderProps) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  React.useEffect(() => {
-    if (props.changeColorOnScroll) {
-      window.addEventListener('scroll', headerColorChange);
-    }
-    return function cleanup() {
-      if (props.changeColorOnScroll) {
-        window.removeEventListener('scroll', headerColorChange);
-      }
-    };
-  });
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+
   const headerColorChange = () => {
     const { color, changeColorOnScroll } = props;
     const windowsScrollTop = window.pageYOffset;
@@ -42,6 +30,21 @@ export default function Header(props: HeaderProps) {
       }
     }
   };
+
+  React.useEffect(() => {
+    if (props.changeColorOnScroll) {
+      window.addEventListener('scroll', headerColorChange);
+    }
+    return function cleanup() {
+      if (props.changeColorOnScroll) {
+        window.removeEventListener('scroll', headerColorChange);
+      }
+    };
+  });
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
   const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,

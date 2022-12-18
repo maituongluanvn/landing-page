@@ -16,10 +16,10 @@ export default function CardHeader(props: CardHeaderProps) {
   const { className, children, color, plain, ...rest } = props;
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,
-    [classes[color + 'CardHeader']]: color,
+    [classes[`${color}CardHeader`]]: color,
     [classes.cardHeaderPlain]: plain,
   });
-  if (className !== undefined) cardHeaderClasses.concat(' ' + className);
+  if (className !== undefined) cardHeaderClasses.concat(` ${className}`);
   return (
     <div className={cardHeaderClasses} {...rest}>
       {children}
