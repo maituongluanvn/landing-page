@@ -8,7 +8,7 @@ import {
   dangerColor
 } from "../../nextjs-material-kit";
 
-const navPillsStyle = (theme: any) => ({
+const navPillsStyle: any = (theme: any) => ({
   root: {
     marginTop: "20px",
     paddingLeft: "0",

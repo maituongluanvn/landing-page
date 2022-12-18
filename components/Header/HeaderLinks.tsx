@@ -46,10 +46,12 @@ export default function HeaderLinks() {
         /> */}
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button href="/projects" color="transparent" className={classes.navLink}>
-          {/* <AutoAwesomeMotionTwoToneIcon className={classes.icons} /> */}
+        <Link className={classes.navLink} href="/projects">
           Projects
-        </Button>
+        </Link>
+        {/* <Button href="/projects" color="transparent" className={classes.navLink}> */}
+        {/* <AutoAwesomeMotionTwoToneIcon className={classes.icons} /> */}
+        {/* </Button> */}
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
