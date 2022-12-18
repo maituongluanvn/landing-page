@@ -5,7 +5,7 @@
         "es6": true,
         "node": true
     },
-    // "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "extends": [
         "eslint:recommended",
         "airbnb",
@@ -30,20 +30,33 @@
         "ecmaFeatures": {
             "jsx": true // enable linting for jsx files
         },
-        "ecmaVersion": 11
+        "ecmaVersion": 11,
+        "project": ["tsconfig.json"]
         // "sourceType": "module"
     },
     "settings": {
         "react": {
             "version": "detect"
+        },
+        // This setting help eslint resolve quick import from Typescript
+        "import/resolver": {
+            "typescript": { "project": "tsconfig.json" }
         }
     },
-    "plugins": ["react", "react-hooks"],
+    "plugins": ["react", "react-hooks", "@typescript-eslint"],
     "rules": {
         // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
         "react/react-in-jsx-scope": "off",
         // NextJs specific fix: allow jsx syntax in js files
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx", ".ts"] }], //should add ".ts" if typescript project
-        "react/display-name": 1
+        "react/display-name": 1,
+        // allow any
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-unsafe-argument": 0,
+        "@typescript-eslint/no-unsafe-assignment": 0,
+        //
+        "react/jsx-props-no-spreading": 0,
+        "react/jsx-curly-brace-presence": 0,
+        "react/jsx-one-expression-per-line": 0
     }
 }

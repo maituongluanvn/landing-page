@@ -1,0 +1,13 @@
+lib/
+build/
+build-*/
+.vscode/
+node_modules/
+coverage/
+__image_snapshots_/_diff_output__
+!.huskyrc
+!.eslintrc.js
+!.prettierrc.js
+!webpack.*.js
+!babel.*.js
+!jest.*
