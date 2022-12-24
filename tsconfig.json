@@ -50,9 +50,11 @@
         "paths": {
             "@components/*": ["components/*"],
             "@styles/*": ["styles/*"],
-            "@pages-sections/*": ["pages-sections/*"]
+            "@pages-sections/*": ["pages-sections/*"],
+            "@store/*": ["store/*"],
+            "@menu-items/*": ["menu-items/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules", "**/*.jsx"]
 }

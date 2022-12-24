@@ -5,6 +5,8 @@ import Head from 'next/head';
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { Provider } from 'react-redux';
+import { store } from 'store';
 
 const variants: any = {
   fadeIn: {
@@ -37,15 +39,17 @@ export default function App({ Component, pageProps }: AppProps) {
   const { asPath } = useRouter();
   return (
     <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>By Luan Mai</title>
-      </Head>
-      <AnimatePresence initial={false} exitBeforeEnter>
-        <motion.div key={asPath} variants={variants} initial="fadeIn" animate="inactive" exit="fadeOut">
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
+      <Provider store={store}>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <title>By Luan Mai</title>
+        </Head>
+        <AnimatePresence initial={false} exitBeforeEnter>
+          <motion.div key={asPath} variants={variants} initial="fadeIn" animate="inactive" exit="fadeOut">
+            <Component {...pageProps} />
+          </motion.div>
+        </AnimatePresence>
+      </Provider>
     </>
   );
 }

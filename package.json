@@ -21,7 +21,13 @@
         "framer-motion": "^7.10.2",
         "next": "13.0.6",
         "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "react-dom": "18.2.0",
+        "@tabler/icons": "^1.72.0",
+        "material-ui-popup-state": "^4.0.1",
+        "react-redux": "^8.0.2",
+        "redux": "^4.2.0",
+        "react-device-detect": "^2.2.2",
+        "react-perfect-scrollbar": "^1.5.8"
     },
     "devDependencies": {
         "@babel/core": "^7.20.5",
