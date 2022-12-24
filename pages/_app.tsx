@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { store } from 'store';
+import { ThemeProvider } from '@mui/material/styles';
+import themes from '../themes';
 
 const variants: any = {
   fadeIn: {
@@ -36,6 +38,8 @@ const variants: any = {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
+  console.log('🚀 ~ App ~ Component', Component);
+  console.log('🚀 ~ App ~ pageProps', pageProps);
   const { asPath } = useRouter();
   return (
     <>
@@ -46,7 +50,9 @@ export default function App({ Component, pageProps }: AppProps) {
         </Head>
         <AnimatePresence initial={false} exitBeforeEnter>
           <motion.div key={asPath} variants={variants} initial="fadeIn" animate="inactive" exit="fadeOut">
-            <Component {...pageProps} />
+            <ThemeProvider theme={themes('@customization/SET_FONT_FAMILY')}>
+              <Component {...pageProps} />
+            </ThemeProvider>
           </motion.div>
         </AnimatePresence>
       </Provider>
