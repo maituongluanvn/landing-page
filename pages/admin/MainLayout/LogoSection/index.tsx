@@ -5,15 +5,16 @@ import { ButtonBase } from '@mui/material';
 
 // project imports
 import config from 'config';
-import Logo from 'ui-component/Logo';
+// import Logo from 'ui-component/Logo';
 
 // ==============================|| MAIN LOGO ||============================== //
 
+// <ButtonBase disableRipple component={Link} to={config.defaultPath}>
 const LogoSection = () => (
-    // <ButtonBase disableRipple component={Link} to={config.defaultPath}>
-    <ButtonBase disableRipple>
-        <Logo />
-    </ButtonBase>
+  <ButtonBase disableRipple>
+    {/* <Logo /> */}
+    abc
+  </ButtonBase>
 );
 
 export default LogoSection;

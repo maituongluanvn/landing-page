@@ -51,8 +51,9 @@
             "@components/*": ["components/*"],
             "@styles/*": ["styles/*"],
             "@pages-sections/*": ["pages-sections/*"],
-            "@store/*": ["store/*"],
-            "@menu-items/*": ["menu-items/*"]
+            "@store-ts/*": ["store-ts/*"],
+            "@menu-items/*": ["menu-items/*"],
+            "@config-ts/*": ["config-ts/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

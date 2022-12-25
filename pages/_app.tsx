@@ -38,8 +38,6 @@ const variants: any = {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
-  console.log('🚀 ~ App ~ Component', Component);
-  console.log('🚀 ~ App ~ pageProps', pageProps);
   const { asPath } = useRouter();
   return (
     <>
