@@ -5,7 +5,7 @@ import { useTheme } from '@mui/material/styles';
 import { Divider, List, Typography } from '@mui/material';
 
 // project imports
-import NavItem from '../NavItem/index.tsx';
+import NavItem from '../NavItem/index';
 import NavCollapse from '../NavCollapse';
 
 // ==============================|| SIDEBAR MENU LIST GROUP ||============================== //
@@ -15,7 +15,7 @@ const NavGroup = (props: any) => {
   const theme: any = useTheme();
 
   // menu list collapse & items
-  const items = item.children?.map((menu: any) => {
+  const items = item?.children?.map((menu: any) => {
     switch (menu.type) {
       case 'collapse':
         return <NavCollapse key={menu.id} menu={menu} level={1} />;
@@ -34,12 +34,12 @@ const NavGroup = (props: any) => {
     <>
       <List
         subheader={
-          item.title && (
+          item?.title && (
             <Typography variant="caption" sx={{ ...theme.typography.menuCaption }} display="block" gutterBottom>
               {item.title}
-              {item.caption && (
+              {item?.caption && (
                 <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
-                  {item.caption}
+                  {item?.caption}
                 </Typography>
               )}
             </Typography>

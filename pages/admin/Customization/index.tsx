@@ -22,8 +22,8 @@ import { IconSettings } from '@tabler/icons';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 
 // project imports
-import SubCard from 'ui-component/cards/SubCard';
-import AnimateButton from 'ui-component/extended/AnimateButton';
+import SubCard from '@admin-component/cards/SubCard';
+import AnimateButton from '@admin-component/extended/AnimateButton';
 
 // import { SET_BORDER_RADIUS, SET_FONT_FAMILY } from '@store-ts/actions';
 
@@ -52,7 +52,7 @@ const Customization = () => {
 
   // state - border radius
   const [borderRadius, setBorderRadius] = useState(customization.borderRadius);
-  const handleBorderRadius = (event: any, newValue: any) => {
+  const handleBorderRadius = (newValue: any) => {
     setBorderRadius(newValue);
   };
 

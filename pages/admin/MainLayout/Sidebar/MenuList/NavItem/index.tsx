@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { forwardRef, useEffect } from 'react';
+import { useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,6 +13,8 @@ import { MENU_OPEN, SET_MENU } from '@store-ts/actions';
 // assets
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
+import HomeIcon from '@mui/icons-material/Home';
+
 // ==============================|| SIDEBAR MENU LIST ITEMS ||============================== //
 
 const NavItem = (props: any) => {
@@ -22,9 +24,9 @@ const NavItem = (props: any) => {
   const customization = useSelector((state: any) => state.customization);
   const matchesSM = useMediaQuery(theme.breakpoints.down('lg'));
 
-  const Icon = item.icon;
+  // const Icon = HomeIcon;
   const itemIcon = item?.icon ? (
-    <Icon stroke={1.5} size="1.3rem" />
+    <HomeIcon />
   ) : (
     <FiberManualRecordIcon
       sx={{
@@ -35,10 +37,10 @@ const NavItem = (props: any) => {
     />
   );
 
-  let itemTarget = '_self';
-  if (item.target) {
-    itemTarget = '_blank';
-  }
+  // let itemTarget = '_self';
+  // if (item.target) {
+  //   itemTarget = '_blank';
+  // }
 
   // let listItemProps = {
   //     component: forwardRef((props, ref) => <Link ref={ref} {...props} to={item.url} target={itemTarget} />)
@@ -67,7 +69,7 @@ const NavItem = (props: any) => {
   return (
     <ListItemButton
       // {...listItemProps}
-      disabled={item.disabled}
+      disabled={item?.disabled}
       sx={{
         borderRadius: `${customization.borderRadius}px`,
         mb: 0.5,
@@ -86,24 +88,24 @@ const NavItem = (props: any) => {
             variant={customization.isOpen.findIndex((id: any) => id === item.id) > -1 ? 'h5' : 'body1'}
             color="inherit"
           >
-            {item.title}
+            {item?.title}
           </Typography>
         }
         secondary={
-          item.caption && (
+          item?.caption && (
             <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
-              {item.caption}
+              {item?.caption}
             </Typography>
           )
         }
       />
-      {item.chip && (
+      {item?.chip && (
         <Chip
-          color={item.chip.color}
-          variant={item.chip.variant}
-          size={item.chip.size}
-          label={item.chip.label}
-          avatar={item.chip.avatar && <Avatar>{item.chip.avatar}</Avatar>}
+          color={item?.chip.color}
+          variant={item?.chip.variant}
+          size={item?.chip.size}
+          label={item?.chip.label}
+          avatar={item?.chip.avatar && <Avatar>{item?.chip.avatar}</Avatar>}
         />
       )}
     </ListItemButton>

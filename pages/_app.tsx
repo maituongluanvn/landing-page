@@ -6,7 +6,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
-import { store } from 'store';
+import { store } from '@store-ts/index';
 import { ThemeProvider } from '@mui/material/styles';
 import themes from '../themes';
 

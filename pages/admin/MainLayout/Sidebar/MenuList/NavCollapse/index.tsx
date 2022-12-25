@@ -11,7 +11,7 @@ import { Collapse, List, ListItemButton, ListItemIcon, ListItemText, Typography 
 // assets
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import { IconChevronDown, IconChevronUp } from '@tabler/icons';
-import NavItem from '../NavItem/index.tsx';
+import NavItem from '../NavItem/index';
 
 // ==============================|| SIDEBAR MENU LIST COLLAPSE ITEMS ||============================== //
 
@@ -26,33 +26,35 @@ const NavCollapse = (props: any) => {
 
   const handleClick = () => {
     setOpen(!open);
-    setSelected(!selected ? menu.id : null);
+    setSelected(!selected ? menu?.id : null);
   };
 
   // menu collapse & item
-  const menus = menu.children?.map((item: any) => {
-    switch (item.type) {
+  const menus = menu?.children?.map((item: any) => {
+    switch (item?.type) {
       case 'collapse':
-        return <NavCollapse key={item.id} menu={item} level={level + 1} />;
+        // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
+        return <NavCollapse key={item?.id} menu={item} level={level + 1} />;
       case 'item':
-        return <NavItem key={item.id} item={item} level={level + 1} />;
+        // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
+        return <NavItem key={item?.id} item={item} level={level + 1} />;
       default:
         return (
-          <Typography key={item.id} variant="h6" color="error" align="center">
+          <Typography key={item?.id} variant="h6" color="error" align="center">
             Menu Items Error
           </Typography>
         );
     }
   });
 
-  const Icon = menu.icon;
-  const menuIcon = menu.icon ? (
+  const Icon = menu?.icon;
+  const menuIcon = menu?.icon ? (
     <Icon strokeWidth={1.5} size="1.3rem" style={{ marginTop: 'auto', marginBottom: 'auto' }} />
   ) : (
     <FiberManualRecordIcon
       sx={{
-        width: selected === menu.id ? 8 : 6,
-        height: selected === menu.id ? 8 : 6,
+        width: selected === menu?.id ? 8 : 6,
+        height: selected === menu?.id ? 8 : 6,
       }}
       fontSize={level > 0 ? 'inherit' : 'medium'}
     />
@@ -69,20 +71,20 @@ const NavCollapse = (props: any) => {
           py: level > 1 ? 1 : 1.25,
           pl: `${level * 24}px`,
         }}
-        selected={selected === menu.id}
+        selected={selected === menu?.id}
         onClick={handleClick}
       >
-        <ListItemIcon sx={{ my: 'auto', minWidth: !menu.icon ? 18 : 36 }}>{menuIcon}</ListItemIcon>
+        <ListItemIcon sx={{ my: 'auto', minWidth: !menu?.icon ? 18 : 36 }}>{menuIcon}</ListItemIcon>
         <ListItemText
           primary={
-            <Typography variant={selected === menu.id ? 'h5' : 'body1'} color="inherit" sx={{ my: 'auto' }}>
-              {menu.title}
+            <Typography variant={selected === menu?.id ? 'h5' : 'body1'} color="inherit" sx={{ my: 'auto' }}>
+              {menu?.title}
             </Typography>
           }
           secondary={
-            menu.caption && (
+            menu?.caption && (
               <Typography variant="caption" sx={{ ...theme.typography.subMenuCaption }} display="block" gutterBottom>
-                {menu.caption}
+                {menu?.caption}
               </Typography>
             )
           }

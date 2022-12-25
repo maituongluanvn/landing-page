@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -16,16 +16,16 @@ import { gridSpacing } from '@store-ts/constant';
 // assets
 import { IconTallymark1 } from '@tabler/icons';
 import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
-import HomeIcon from '@mui/icons-material/Home';
-import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+// import HomeIcon from '@mui/icons-material/Home';
+// import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
 
-const linkSX = {
-  display: 'flex',
-  color: 'grey.900',
-  textDecoration: 'none',
-  alignContent: 'center',
-  alignItems: 'center',
-};
+// const linkSX = {
+//   display: 'flex',
+//   color: 'grey.900',
+//   textDecoration: 'none',
+//   alignContent: 'center',
+//   alignItems: 'center',
+// };
 
 // ==============================|| BREADCRUMBS ||============================== //
 
@@ -42,7 +42,7 @@ const Breadcrumbs = (props: any) => {
     color: theme.palette.secondary.main,
   };
 
-  const [main, setMain] = useState<any>();
+  // const [main, setMain] = useState<any>();
   const [item, setItem] = useState<any>();
 
   // set active item state
@@ -52,10 +52,10 @@ const Breadcrumbs = (props: any) => {
         if (collapse.type && collapse.type === 'collapse') {
           getCollapse(collapse);
         } else if (collapse.type && collapse.type === 'item') {
-          //   if (document.location.pathname === config.basename + collapse.url) {
-          //     setMain(menu);
-          //     setItem(collapse);
-          //   }
+          // if (document.location.pathname === config.basename + collapse.url) {
+          //   setMain(menu);
+          setItem(collapse);
+          // }
         }
         return false;
       });
@@ -83,19 +83,19 @@ const Breadcrumbs = (props: any) => {
   let itemContent;
   let breadcrumbContent = <Typography />;
   let itemTitle = '';
-  let CollapseIcon;
+  // let CollapseIcon;
   let ItemIcon;
 
   // collapse item
-  //   if (main && main.type === 'collapse') {
-  //     CollapseIcon = main.icon ? main.icon : AccountTreeTwoToneIcon;
-  //     mainContent = (
-  //       <Typography component={Link} to="#" variant="subtitle1" sx={linkSX}>
-  //         {icons && <CollapseIcon style={iconStyle} />}
-  //         {main.title}
-  //       </Typography>
-  //     );
-  //   }
+  // if (main && main.type === 'collapse') {
+  //   CollapseIcon = main.icon ? main.icon : AccountTreeTwoToneIcon;
+  //   mainContent = (
+  //     <Typography component={Link} to="#" variant="subtitle1" sx={linkSX}>
+  //       {icons && <CollapseIcon style={iconStyle} />}
+  //       {main.title}
+  //     </Typography>
+  //   );
+  // }
 
   // items
   if (item && item.type === 'item') {
@@ -153,11 +153,11 @@ const Breadcrumbs = (props: any) => {
                   maxItems={maxItems || 8}
                   separator={separatorIcon}
                 >
-                  <Typography component={Link} to="/" color="inherit" variant="subtitle1" sx={linkSX}>
+                  {/* <Typography component={Link} to="/" color="inherit" variant="subtitle1" sx={linkSX}>
                     {icons && <HomeTwoToneIcon sx={iconStyle} />}
                     {icon && <HomeIcon sx={{ ...iconStyle, mr: 0 }} />}
                     {!icon && 'Dashboard'}
-                  </Typography>
+                  </Typography> */}
                   {mainContent}
                   {itemContent}
                 </MuiBreadcrumbs>

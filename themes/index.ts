@@ -13,7 +13,7 @@ import themeTypography from './typography';
  * @param {JsonObject} customization customization parameter object
  */
 
-export const theme = (customization) => {
+export const theme = (customization: any) => {
     const color = colors;
 
     const themeOption = {
@@ -31,7 +31,7 @@ export const theme = (customization) => {
         customization
     };
 
-    const themeOptions = {
+    const themeOptions: any = {
         direction: 'ltr',
         palette: themePalette(themeOption),
         mixins: {

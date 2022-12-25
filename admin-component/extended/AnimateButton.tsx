@@ -32,7 +32,7 @@ const AnimateButton = forwardRef((props: any, ref: any) => {
     case 'rotate':
       return (
         <motion.div
-          //   ref={ref}
+          ref={ref}
           animate={{ rotate: 360 }}
           transition={{
             repeat: Infinity,
@@ -48,7 +48,7 @@ const AnimateButton = forwardRef((props: any, ref: any) => {
       if (direction === 'up' || direction === 'down') {
         return (
           <motion.div
-            // ref={ref}
+            ref={ref}
             animate={{ y: y !== undefined ? y : '' }}
             onHoverEnd={() => cycleY()}
             onHoverStart={() => cycleY()}
@@ -59,7 +59,7 @@ const AnimateButton = forwardRef((props: any, ref: any) => {
       }
       return (
         <motion.div
-          //   ref={ref}
+          ref={ref}
           animate={{ x: x !== undefined ? x : '' }}
           onHoverEnd={() => cycleX()}
           onHoverStart={() => cycleX()}
@@ -84,22 +84,22 @@ const AnimateButton = forwardRef((props: any, ref: any) => {
   }
 });
 
-// AnimateButton.propTypes = {
-//   children: PropTypes.node,
-//   offset: PropTypes.number,
-//   type: PropTypes.oneOf(['slide', 'scale', 'rotate']),
-//   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
-//   scale: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
-// };
+AnimateButton.propTypes = {
+  children: PropTypes.node,
+  offset: PropTypes.number,
+  type: PropTypes.oneOf(['slide', 'scale', 'rotate']),
+  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']),
+  scale: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+};
 
-// AnimateButton.defaultProps = {
-//   type: 'scale',
-//   offset: 10,
-//   direction: 'right',
-//   scale: {
-//     hover: 1,
-//     tap: 0.9,
-//   },
-// };
+AnimateButton.defaultProps = {
+  type: 'scale',
+  offset: 10,
+  direction: 'right',
+  scale: {
+    hover: 1,
+    tap: 0.9,
+  },
+};
 
 export default AnimateButton;
