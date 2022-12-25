@@ -58,5 +58,5 @@
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store/index.js"],
-    "exclude": ["node_modules", "**/*.jsx"]
+    "exclude": ["node_modules"]
 }

@@ -58,6 +58,7 @@ const ProfileSection = () => {
   const anchorRef: any = useRef(null);
   // eslint-disable-next-line @typescript-eslint/require-await
   const handleLogout = () => {
+    // eslint-disable-next-line no-console
     console.log('Logout');
   };
 

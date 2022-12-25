@@ -8,18 +8,19 @@ import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material'
 
 // project imports
 import Breadcrumbs from '@admin-component/extended/Breadcrumbs';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Customization from '../Customization';
 import navigation from 'menu-items';
 import { drawerWidth } from '@store-ts/constant';
 import { SET_MENU } from '@store-ts/actions';
 
 // assets
 import { IconChevronRight } from '@tabler/icons';
+import Customization from '../Customization';
+import Sidebar from './Sidebar';
+import Header from './Header';
 
 // styles
 const Main = styled('main', { shouldForwardProp: (prop: any) => prop !== 'open' })(
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   ({ theme, open }: { theme: any; open: any }) => ({
     ...theme.typography.mainContent,
     ...(!open && {
@@ -71,6 +72,7 @@ const MainLayout = () => {
   const matchDownMd = useMediaQuery(theme.breakpoints.down('lg'));
 
   // Handle left drawer
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   const leftDrawerOpened = useSelector((state: any) => state.customization.opened);
   const dispatch = useDispatch();
   const handleLeftDrawerToggle = () => {

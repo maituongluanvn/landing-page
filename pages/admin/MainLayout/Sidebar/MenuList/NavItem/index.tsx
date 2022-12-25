@@ -21,6 +21,7 @@ const NavItem = (props: any) => {
   const { item, level } = props;
   const theme: any = useTheme();
   const dispatch = useDispatch();
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   const customization = useSelector((state: any) => state.customization);
   const matchesSM = useMediaQuery(theme.breakpoints.down('lg'));
 
