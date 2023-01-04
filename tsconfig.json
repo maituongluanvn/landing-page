@@ -49,10 +49,14 @@
         "isolatedModules": true,
         "paths": {
             "@components/*": ["components/*"],
+            "@admin-component/*": ["admin-component/*"],
             "@styles/*": ["styles/*"],
-            "@pages-sections/*": ["pages-sections/*"]
+            "@pages-sections/*": ["pages-sections/*"],
+            "@store-ts/*": ["store-ts/*"],
+            "@menu-items/*": ["menu-items/*"],
+            "@config-ts/*": ["config-ts/*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "store/index.js"],
     "exclude": ["node_modules"]
 }
